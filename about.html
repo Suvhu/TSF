@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DonateKart - About</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* navbar section */
+        .navbar {
+            width: 100%;
+            height: 10vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: black;
+            font-size: 1.5rem;
+        }
+
+        .navbar1 {
+            width: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .navbar1 a {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: brown;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .navbar2 {
+            width: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-right: 7%;
+        }
+
+        .navbar2 ul {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            list-style: none;
+            padding: 0 3%;
+        }
+
+        .navbar2 ul li a {
+            text-decoration: none;
+            color: rgb(19, 171, 171);
+        }
+
+        #cross-img {
+            display: none;
+        }
+
+        #menu-img {
+            display: none;
+        }
+
+        .navbar2 ul li a:hover {
+            color: aqua;
+        }
+
+        .navbar2 ul li {
+            transition: transform 0.5s;
+        }
+
+        .navbar2 ul li:hover {
+            transform: scale(1.2);
+        }
+
+        /* about section */
+        .about {
+            width: 100%;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            font-size: 1.3rem;
+            background-color: rgba(0, 0, 0, 0.758);
+        }
+
+        .about .about1 {
+            width: 17%;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            background-color: aqua;
+            padding: 0 3%;
+            overflow: hidden;
+            border-radius: 12px;
+            border: 4px solid brown;
+            transition: transform 0.5s;
+        }
+
+        .about .about1:hover {
+            transform: scale(1.05);
+        }
+
+        .about .about1 h1 {
+            padding: 25% 0;
+            text-align: center;
+            color: brown;
+            text-shadow: 2px 1px aqua;
+        }
+
+        .about .about1 span {
+            font-size: 1.6rem;
+            text-align: justify;
+            color: black;
+            text-shadow: 1px 1px yellow;
+            font-weight: bold;
+        }
+
+        .about .about1 ul {
+            font-size: 1.6rem;
+            text-align: justify;
+            color: black;
+            font-weight: bold;
+            text-shadow: 1px 1px yellow;
+        }
+
+        #abouta {
+            background-image: url(about-img4.jpeg);
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #aboutb {
+            background-image: url(about-img2.jpeg);
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #aboutc {
+            background-image: url(about-img3.png);
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #aboutd {
+            background-image: url(about-img1.jpeg);
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* Media query */
+        @media (max-width:480px) {
+
+            /* navbar section */
+            .navbar {
+                font-size: 1.3rem;
+                overflow: visible;
+            }
+
+            .navbar .navbar1 {
+                width: 60%;
+            }
+            .navbar .navbar1 a{
+                padding-left: 50%;
+            }
+
+
+            #menu-img {
+                display: block;
+                position: absolute;
+                left: 82%;
+            }
+
+            #cross-img {
+                display: block;
+            }
+
+            .navbar2 {
+                display: none;
+                position: absolute;
+                width: 40%;
+                height: 35vh;
+                background-color: rgba(0, 0, 0, 0.881);
+                z-index: 1;
+                top: 9.5%;
+                left: 60%;
+            }
+
+            .navbar2 ul {
+                height: 90%;
+                flex-direction: column;
+                justify-content: space-around;
+                padding: 10% 0%;
+            }
+
+            .navbar2 ul li a {
+                font-size: 1.8rem;
+            }
+
+            /* about section */
+            .about {
+                height: 170vh;
+                flex-direction: column;
+                justify-content: space-around;
+                font-size: 1.2rem;
+            }
+
+            .about .about1 {
+                width: 80%;
+                height: 40vh;
+            }
+
+            .about .about1 h1 {
+                padding: 15% 0;
+            }
+            .about .about1 span{
+                text-align: center;
+                font-size: 1.3rem;
+            }
+            .about .about1 ul li{
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbar1">
+            <a href="index.html">
+                <div class="nav-img"><img src="nav-icon.png"></div>
+                <div class="nav-name">
+                    <h2>DonateKart</h2>
+                </div>
+                <i onclick="funcshow() " id="menu-img"><img src="menu.png"></i>
+            </a>
+        </div>
+        <div class="navbar2" id="right">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="joinus.html">Join Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a onclick="funchide()" id="cross-img"><img src="cross.png"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="about">
+        <div class="about1" id="abouta">
+            <h1>About</h1>
+            <span>A world built on love and dignity.We believe that no child is ever lost.Every person is valuable and
+                all people are worthy of love.
+            </span>
+        </div>
+        <div class="about1" id="aboutb">
+            <h1>Our work</h1>
+            <ul>
+                <li>Child Sponsorship</li>
+                <li>Foster Care</li>
+                <li>Special needs Education</li>
+                <li>Counselling Support</li>
+                <li>Emergency Relief</li>
+            </ul>
+        </div>
+        <div class="about1" id="aboutc">
+            <h1>Our Mission</h1>
+            <span>
+                Relentlessly committed to raising a generation of advocates that believe injustice does not have breath
+                in their community.
+            </span>
+        </div>
+        <div class="about1" id="aboutd">
+            <h1>Our Vision</h1>
+            <span>
+                We see a future where people are not just living to survive, but operating through the overflow of
+                their transformative identity.
+            </span>
+        </div>
+    </div>
+</body>
+<Script>
+    const righty = document.getElementById("right");
+    const menuimg = document.getElementById("menu-img")
+    function funchide() {
+        event.preventDefault();
+        righty.style.display = "none";
+        menuimg.style.display = "block";
+    }
+    function funcshow() {
+        event.preventDefault();
+        righty.style.display = "block";
+        menuimg.style.display = "none";
+    }
+</Script>
+
+</html>

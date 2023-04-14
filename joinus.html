@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DonateKart - Join Us</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* navbar section */
+        .navbar {
+            width: 100%;
+            height: 10vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: black;
+            font-size: 1.5rem;
+        }
+
+        .navbar1 {
+            width: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .navbar1 a {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: brown;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .navbar2 {
+            width: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-right: 7%;
+        }
+
+        .navbar2 ul {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            list-style: none;
+            padding: 0 3%;
+        }
+
+        .navbar2 ul li a {
+            text-decoration: none;
+            color: rgb(19, 171, 171);
+        }
+
+        #cross-img {
+            display: none;
+        }
+
+        #menu-img {
+            display: none;
+        }
+
+        .navbar2 ul li a:hover {
+            color: aqua;
+        }
+
+        .navbar2 ul li {
+            transition: transform 0.5s;
+        }
+
+        .navbar2 ul li:hover {
+            transform: scale(1.2);
+        }
+
+        /* join us section */
+        .joinus {
+            width: 100%;
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgba(0, 0, 0, 0.758);
+            font-size: 1.3rem;
+        }
+
+        .joinus h1 {
+            padding-top: 3%;
+            color: brown;
+            text-shadow: 2px 1px aqua;
+        }
+
+        .joinus .join1 {
+            width: 35%;
+            height: 65vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            background-color: rgba(0, 0, 0, 0.363);
+            margin-bottom: 2%;
+            border-radius: 12px;
+            padding-top: 2%;
+            border: 4px solid brown;
+            background-image: url(join-img.jpeg);
+            background-position: right;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .joinus .join1 .form-input {
+            width: 80%;
+            height: 8%;
+            font-size: 1.05rem;
+            border: transparent;
+            padding: 1% 0% 0 3%;
+            background-color: rgba(57, 54, 54, 0.895);
+            border-radius: 8px;
+            color: white;
+        }
+
+        .joinus .join1 #join-body {
+            height: 20%;
+        }
+
+        .joinus .join1 .btn {
+            width: 18%;
+            height: 8%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background-color: rgb(160, 14, 14);
+            padding: 3% 2%;
+            border-radius: 10px;
+            color: rgb(255, 255, 255);
+            transition: transform 0.5s;
+            border: transparent;
+        }
+
+        .joinus .join1 .btn:hover {
+            transform: scale(1.1);
+            color: black;
+            background-color: transparent;
+            border: 2px solid brown;
+        }
+
+        /* Media query */
+        @media (max-width:480px) {
+
+            /* navbar section */
+            .navbar {
+                font-size: 1.3rem;
+                overflow: visible;
+            }
+
+            .navbar .navbar1 {
+                width: 60%;
+            }
+            .navbar .navbar1 a{
+                padding-left: 50%;
+            }
+
+
+            #menu-img {
+                display: block;
+                position: absolute;
+                left: 82%;
+            }
+
+            #cross-img {
+                display: block;
+            }
+
+            .navbar2 {
+                display: none;
+                position: absolute;
+                width: 40%;
+                height: 35vh;
+                background-color: rgba(0, 0, 0, 0.881);
+                z-index: 1;
+                top: 9.5%;
+                left: 60%;
+            }
+
+            .navbar2 ul {
+                height: 90%;
+                flex-direction: column;
+                justify-content: space-around;
+                padding: 10% 0%;
+            }
+
+            .navbar2 ul li a {
+                font-size: 1.8rem;
+            }
+
+            /* join us section */
+            .joinus {
+                height: 90vh;
+                font-size: 1.2rem;
+            }
+
+            .joinus .join1 {
+                width: 80%;
+                height: 60vh;
+                margin-bottom: 25%;
+                background-position: center;
+            }
+
+            .joinus .join1 .btn {
+                width: 28%;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbar1">
+            <a href="index.html">
+                <div class="nav-img"><img src="nav-icon.png"></div>
+                <div class="nav-name">
+                    <h2>DonateKart</h2>
+                </div>
+                <i onclick="funcshow() " id="menu-img"><img src="menu.png"></i>
+            </a>
+        </div>
+        <div class="navbar2" id="right">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="joinus.html">Join Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a onclick="funchide()" id="cross-img"><img src="cross.png"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="joinus">
+        <h1>Join Us Today</h1>
+        <form action="https://formspree.io/f/xoqzkojp" class="join1" method="POST">
+            <input type="text" name="Name-" class="form-input" id="name" placeholder="Enter your name" required>
+            <input type="text" name="Email-" class="form-input" id="email" placeholder="Enter your email id" required>
+            <input type="text" name="Address-" class="form-input" id="address" placeholder="Enter your address"
+                required>
+            <input type="number" name="phone_number-" class="form-input" id="number"
+                placeholder="Enter your phone number" required>
+            <textarea name="Reason-" class="form-input" id="join-body" cols="20" rows="5"
+                placeholder="Why should you join us ?" required></textarea>
+            <button type="submit" class="btn" onclick="funvan()">
+                <h3>Join now</h3>
+            </button>
+        </form>
+    </div>
+</body>
+<script>
+    function funvan() {
+        setTimeout(() => {
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("address").value = "";
+            document.getElementById("number").value = "";
+            document.getElementById("join-body").value = "";
+        }, 500);
+    }
+    const righty = document.getElementById("right");
+    const menuimg = document.getElementById("menu-img")
+    function funchide() {
+        event.preventDefault();
+        righty.style.display = "none";
+        menuimg.style.display = "block";
+    }
+    function funcshow() {
+        event.preventDefault();
+        righty.style.display = "block";
+        menuimg.style.display = "none";
+    }
+</script>
+
+</html>
